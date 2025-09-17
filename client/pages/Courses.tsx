@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CoursesManagementQuick } from "@/components/ims/QuickSections";
+import CoursesSection from "@/components/ims/CoursesSection";
 
 export default function Courses() {
   const categories = [
