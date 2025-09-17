@@ -1,7 +1,20 @@
 import { useMemo, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useIMS } from "@/contexts/ims-store";
 
 function sameMonth(a: Date, b: Date) {
@@ -17,17 +30,36 @@ export default function AdmissionsTables() {
   const [courseFilter, setCourseFilter] = useState<string>(ALL);
   const [campusFilter, setCampusFilter] = useState<string>(ALL);
 
-  const all = Object.values(admissions).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  const all = Object.values(admissions).sort((a, b) =>
+    b.createdAt.localeCompare(a.createdAt),
+  );
   const today = new Date();
 
-  const todays = useMemo(() => all.filter((a) => new Date(a.admissionDate).toDateString() === today.toDateString()), [all]);
-  const month = useMemo(() => all.filter((a) => sameMonth(new Date(a.admissionDate), today)), [all]);
-  const year = useMemo(() => all.filter((a) => sameYear(new Date(a.admissionDate), today)), [all]);
+  const todays = useMemo(
+    () =>
+      all.filter(
+        (a) =>
+          new Date(a.admissionDate).toDateString() === today.toDateString(),
+      ),
+    [all],
+  );
+  const month = useMemo(
+    () => all.filter((a) => sameMonth(new Date(a.admissionDate), today)),
+    [all],
+  );
+  const year = useMemo(
+    () => all.filter((a) => sameYear(new Date(a.admissionDate), today)),
+    [all],
+  );
 
   const filterList = (list: typeof all) =>
     list
-      .filter((a) => (courseFilter && courseFilter !== ALL ? a.course === courseFilter : true))
-      .filter((a) => (campusFilter && campusFilter !== ALL ? a.campus === campusFilter : true));
+      .filter((a) =>
+        courseFilter && courseFilter !== ALL ? a.course === courseFilter : true,
+      )
+      .filter((a) =>
+        campusFilter && campusFilter !== ALL ? a.campus === campusFilter : true,
+      );
 
   const renderTable = (items: typeof all) => (
     <div className="rounded-md border overflow-auto">
@@ -47,13 +79,20 @@ export default function AdmissionsTables() {
               <TableCell className="font-medium">{a.fullName}</TableCell>
               <TableCell>{a.course}</TableCell>
               <TableCell>{a.campus}</TableCell>
-              <TableCell>{new Date(a.admissionDate).toLocaleDateString()}</TableCell>
+              <TableCell>
+                {new Date(a.admissionDate).toLocaleDateString()}
+              </TableCell>
               <TableCell>{a.status}</TableCell>
             </TableRow>
           ))}
           {items.length === 0 && (
             <TableRow>
-              <TableCell colSpan={5} className="text-center text-muted-foreground">No items</TableCell>
+              <TableCell
+                colSpan={5}
+                className="text-center text-muted-foreground"
+              >
+                No items
+              </TableCell>
             </TableRow>
           )}
         </TableBody>
@@ -62,7 +101,9 @@ export default function AdmissionsTables() {
   );
 
   const courses = Array.from(new Set(all.map((a) => a.course))).filter(Boolean);
-  const campuses = Array.from(new Set(all.map((a) => a.campus))).filter(Boolean);
+  const campuses = Array.from(new Set(all.map((a) => a.campus))).filter(
+    Boolean,
+  );
 
   return (
     <div className="space-y-4">
@@ -75,7 +116,9 @@ export default function AdmissionsTables() {
             <SelectContent>
               <SelectItem value={ALL}>All</SelectItem>
               {courses.map((c) => (
-                <SelectItem key={c} value={c}>{c}</SelectItem>
+                <SelectItem key={c} value={c}>
+                  {c}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -88,7 +131,9 @@ export default function AdmissionsTables() {
             <SelectContent>
               <SelectItem value={ALL}>All</SelectItem>
               {campuses.map((c) => (
-                <SelectItem key={c} value={c}>{c}</SelectItem>
+                <SelectItem key={c} value={c}>
+                  {c}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
