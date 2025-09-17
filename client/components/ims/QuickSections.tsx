@@ -40,7 +40,7 @@ export function BatchTimeTableQuick() {
         ))}
       </div>
       <div className="flex justify-end pt-2">
-        <Button size="sm" variant="outline">View Full Timetable</Button>
+        <Button asChild size="sm" variant="outline"><Link to="/batches">View Full Timetable</Link></Button>
       </div>
     </div>
   );
@@ -74,7 +74,7 @@ export function CoursesManagementQuick() {
         ))}
       </div>
       <div className="flex justify-end">
-        <Button size="sm" variant="outline">Manage Courses</Button>
+        <Button asChild size="sm" variant="outline"><Link to="/courses">Manage Courses</Link></Button>
       </div>
     </div>
   );
@@ -105,7 +105,7 @@ export function CertificateManagementQuick() {
         ))}
       </div>
       <div className="flex justify-end">
-        <Button size="sm" variant="outline">View All Requests</Button>
+        <Button asChild size="sm" variant="outline"><Link to="/certificates">View All Requests</Link></Button>
       </div>
     </div>
   );
@@ -131,7 +131,7 @@ export function CampusEmployeesQuick() {
             <div className="p-3">
               <div className="font-medium">{c.name}</div>
               <div className="text-xs text-muted-foreground">Students: {c.students} • Staff: {c.staff}</div>
-              <div className="mt-2"><Button size="xs" variant="outline">Open</Button></div>
+              <div className="mt-2"><Button asChild size="xs" variant="outline"><Link to="/campuses">Open</Link></Button></div>
             </div>
           </div>
         ))}
