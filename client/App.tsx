@@ -12,6 +12,14 @@ import Batches from "./pages/Batches";
 import Courses from "./pages/Courses";
 import Certificates from "./pages/Certificates";
 import Campuses from "./pages/Campuses";
+import EnquiriesNew from "./pages/EnquiriesNew";
+import FollowUp from "./pages/FollowUp";
+import Pipeline from "./pages/Pipeline";
+import ImportEnquiries from "./pages/ImportEnquiries";
+import Actions from "./pages/Actions";
+import StatusHistoryPage from "./pages/StatusHistoryPage";
+import Admissions from "./pages/Admissions";
+import AdmissionsTablesPage from "./pages/AdmissionsTablesPage";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 
@@ -32,6 +40,14 @@ const App = () => (
               <Route path="/courses" element={<Courses />} />
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/campuses" element={<Campuses />} />
+              <Route path="/enquiries/new" element={<EnquiriesNew />} />
+              <Route path="/follow-up" element={<FollowUp />} />
+              <Route path="/pipeline" element={<Pipeline />} />
+              <Route path="/enquiries/import" element={<ImportEnquiries />} />
+              <Route path="/actions" element={<Actions />} />
+              <Route path="/status-history" element={<StatusHistoryPage />} />
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/admissions/tables" element={<AdmissionsTablesPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
