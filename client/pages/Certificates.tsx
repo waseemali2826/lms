@@ -23,9 +23,17 @@ export default function Certificates() {
             <CardTitle>Preview</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <img src="/placeholder.svg" alt="Certificate Preview" className="w-full h-40 object-cover rounded-md border" />
-            <div className="text-sm text-muted-foreground">Sample certificate layout for reference.</div>
-            <Button size="sm" className="w-full">Download Template</Button>
+            <img
+              src="/placeholder.svg"
+              alt="Certificate Preview"
+              className="w-full h-40 object-cover rounded-md border"
+            />
+            <div className="text-sm text-muted-foreground">
+              Sample certificate layout for reference.
+            </div>
+            <Button size="sm" className="w-full">
+              Download Template
+            </Button>
           </CardContent>
         </Card>
       </div>

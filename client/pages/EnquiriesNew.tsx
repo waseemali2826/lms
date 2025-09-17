@@ -7,7 +7,9 @@ export default function EnquiriesNew() {
     <div className="container py-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Create New Enquiry</h1>
-        <Button variant="outline" asChild><a href="/">Back to Dashboard</a></Button>
+        <Button variant="outline" asChild>
+          <a href="/">Back to Dashboard</a>
+        </Button>
       </div>
       <Card>
         <CardHeader>

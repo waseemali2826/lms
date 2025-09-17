@@ -5,7 +5,7 @@ import { CampusEmployeesQuick } from "@/components/ims/QuickSections";
 
 export default function Campuses() {
   const org = [
-    { name: "Campus Head", people: ["Zainab" ] },
+    { name: "Campus Head", people: ["Zainab"] },
     { name: "Program Managers", people: ["Fahad", "Nimra"] },
     { name: "Admissions", people: ["Ali", "Sana", "Bilal"] },
   ];
@@ -37,7 +37,9 @@ export default function Campuses() {
                     <div key={p} className="flex items-center gap-2">
                       <Avatar className="h-8 w-8">
                         <AvatarImage src="/placeholder.svg" alt={p} />
-                        <AvatarFallback>{p.slice(0,2).toUpperCase()}</AvatarFallback>
+                        <AvatarFallback>
+                          {p.slice(0, 2).toUpperCase()}
+                        </AvatarFallback>
                       </Avatar>
                       <span className="text-sm">{p}</span>
                     </div>

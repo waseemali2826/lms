@@ -41,11 +41,15 @@ export default function Batches() {
                 <div key={t.name} className="flex items-center gap-3">
                   <Avatar className="h-9 w-9">
                     <AvatarImage src={t.img} alt={t.name} />
-                    <AvatarFallback>{t.name.slice(0,2).toUpperCase()}</AvatarFallback>
+                    <AvatarFallback>
+                      {t.name.slice(0, 2).toUpperCase()}
+                    </AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
                     <div className="font-medium">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.course}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {t.course}
+                    </div>
                   </div>
                   <Badge variant="secondary">On duty</Badge>
                 </div>
@@ -60,11 +64,15 @@ export default function Batches() {
               {rooms.map((r) => (
                 <div key={r.name} className="flex items-center justify-between">
                   <div className="font-medium">{r.name}</div>
-                  <div className="text-xs text-muted-foreground">Capacity {r.capacity}</div>
+                  <div className="text-xs text-muted-foreground">
+                    Capacity {r.capacity}
+                  </div>
                 </div>
               ))}
               <Separator />
-              <Button size="sm" variant="outline" className="w-full">Manage Rooms</Button>
+              <Button size="sm" variant="outline" className="w-full">
+                Manage Rooms
+              </Button>
             </CardContent>
           </Card>
         </div>

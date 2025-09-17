@@ -12,7 +12,9 @@ export default function RoleDetail() {
     return (
       <div className="container py-10 space-y-4">
         <h1 className="text-2xl font-bold">Role not found</h1>
-        <Button asChild variant="outline"><Link to="/">Back to Dashboard</Link></Button>
+        <Button asChild variant="outline">
+          <Link to="/">Back to Dashboard</Link>
+        </Button>
       </div>
     );
   }
@@ -21,11 +23,17 @@ export default function RoleDetail() {
     <div className="container py-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">{role.title}</h1>
-        <Button asChild variant="outline"><Link to="/">Back to Dashboard</Link></Button>
+        <Button asChild variant="outline">
+          <Link to="/">Back to Dashboard</Link>
+        </Button>
       </div>
 
       <Card>
-        <img src={role.image} alt={role.title} className="w-full h-40 object-cover border-b" />
+        <img
+          src={role.image}
+          alt={role.title}
+          className="w-full h-40 object-cover border-b"
+        />
         <CardHeader>
           <CardTitle>Overview</CardTitle>
         </CardHeader>

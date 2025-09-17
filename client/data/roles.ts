@@ -110,8 +110,7 @@ export const ROLES: RoleInfo[] = [
   {
     id: "owner",
     title: "Owner",
-    summary:
-      "Strategic oversight of business, growth, and investments.",
+    summary: "Strategic oversight of business, growth, and investments.",
     responsibilities: [
       "Approve budgets",
       "Set growth targets",
@@ -128,8 +127,7 @@ export const ROLES: RoleInfo[] = [
   {
     id: "admin",
     title: "Admin",
-    summary:
-      "System administration, user management, roles, and permissions.",
+    summary: "System administration, user management, roles, and permissions.",
     responsibilities: [
       "Manage users & roles",
       "Configure campuses & courses",

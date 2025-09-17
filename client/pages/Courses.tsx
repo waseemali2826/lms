@@ -37,7 +37,11 @@ export default function Courses() {
           <CardContent className="grid grid-cols-2 gap-3">
             {categories.map((c) => (
               <div key={c.name} className="rounded-md border p-3">
-                <img src="/placeholder.svg" alt={c.name} className="w-full h-16 object-cover rounded" />
+                <img
+                  src="/placeholder.svg"
+                  alt={c.name}
+                  className="w-full h-16 object-cover rounded"
+                />
                 <div className="mt-2 flex items-center justify-between">
                   <div className="font-medium">{c.name}</div>
                   <Badge variant="secondary">{c.count}</Badge>

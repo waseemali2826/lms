@@ -7,9 +7,15 @@ export default function ImportEnquiries() {
     <div className="container py-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Import Bulk Enquiries</h1>
-        <Button variant="outline" asChild><a href="/">Back to Dashboard</a></Button>
+        <Button variant="outline" asChild>
+          <a href="/">Back to Dashboard</a>
+        </Button>
       </div>
-      <img src="/placeholder.svg" alt="Import" className="w-full h-32 object-cover rounded-md border" />
+      <img
+        src="/placeholder.svg"
+        alt="Import"
+        className="w-full h-32 object-cover rounded-md border"
+      />
       <Card>
         <CardHeader>
           <CardTitle>Upload CSV</CardTitle>
