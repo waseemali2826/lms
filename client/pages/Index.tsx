@@ -101,8 +101,8 @@ function DashboardShell() {
               <SidebarMenu>
                 {roles.map((r) => (
                   <SidebarMenuItem key={r}>
-                    <SidebarMenuButton isActive={r === role} onClick={() => setRole(r)}>
-                      <span>{r}</span>
+                    <SidebarMenuButton asChild isActive={r === role}>
+                      <a href={"/roles/" + r.toLowerCase().replaceAll(" ", "-")}> {r} </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
