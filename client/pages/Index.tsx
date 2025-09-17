@@ -32,6 +32,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Building2, LayoutDashboard, Upload, Users } from "lucide-react";
 import { BatchTimeTableQuick, CoursesManagementQuick, CertificateManagementQuick, CampusEmployeesQuick } from "@/components/ims/QuickSections";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
