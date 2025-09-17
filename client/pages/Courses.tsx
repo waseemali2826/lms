@@ -22,8 +22,12 @@ export default function Courses() {
           <CardHeader>
             <CardTitle>Popular Courses</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-6">
             <CoursesManagementQuick />
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Courses (10)</h2>
+              <CoursesSection />
+            </div>
           </CardContent>
         </Card>
         <Card>
