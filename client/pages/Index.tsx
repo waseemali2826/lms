@@ -31,6 +31,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Building2, LayoutDashboard, Upload, Users } from "lucide-react";
+import { BatchTimeTableQuick, CoursesManagementQuick, CertificateManagementQuick, CampusEmployeesQuick } from "@/components/ims/QuickSections";
 
 export default function Index() {
   return (
@@ -184,7 +185,7 @@ function DashboardShell() {
                   <CardTitle>Batch &amp; Time Table (Quick)</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-sm text-muted-foreground">Manage batches from the sidebar (CRUD placeholder)</div>
+                  <BatchTimeTableQuick />
                 </CardContent>
               </Card>
             </div>
@@ -194,7 +195,7 @@ function DashboardShell() {
                   <CardTitle>Courses Management (Quick)</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-sm text-muted-foreground">Create courses and landing pages from the sidebar (placeholder)</div>
+                  <CoursesManagementQuick />
                 </CardContent>
               </Card>
             </div>
@@ -207,7 +208,7 @@ function DashboardShell() {
                   <CardTitle>Certificate Management (Quick)</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-sm text-muted-foreground">Request &amp; track certificates from the sidebar.</div>
+                  <CertificateManagementQuick />
                 </CardContent>
               </Card>
             </div>
@@ -217,7 +218,7 @@ function DashboardShell() {
                   <CardTitle>Campus &amp; Employees (Quick)</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-sm text-muted-foreground">Add campuses, employees and manage users from the sidebar.</div>
+                  <CampusEmployeesQuick />
                 </CardContent>
               </Card>
             </div>
