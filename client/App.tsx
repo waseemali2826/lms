@@ -20,6 +20,7 @@ import Actions from "./pages/Actions";
 import StatusHistoryPage from "./pages/StatusHistoryPage";
 import Admissions from "./pages/Admissions";
 import AdmissionsTablesPage from "./pages/AdmissionsTablesPage";
+import RoleDetail from "./pages/RoleDetail";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/status-history" element={<StatusHistoryPage />} />
               <Route path="/admissions" element={<Admissions />} />
               <Route path="/admissions/tables" element={<AdmissionsTablesPage />} />
+              <Route path="/roles/:roleId" element={<RoleDetail />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
